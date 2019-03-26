@@ -10,13 +10,13 @@ usage: `from Self_Attn import Self_Attn_FM, Self_Attn_C`
 
 inputs: B * C * H * W feature maps
 returns: out: self attention value + input feature maps; attention: B * N * N (N = H * W)
-usage: firstly define the block by `net = Self_Attn_FN()`, and use it like `attn_out = net(conv_out)`
+usage: firstly define the block by `net = Self_Attn_FN(in_dim)`, and use it like `attn_out = net(conv_out)`. You should see that the default latent_dim = in_dim // 8
 </br>
 #### 1.2 Channel level attention
 
 inputs: B * C * H * W feature maps
 returns: out: self attention value + input feature maps; attention: B * c * c (c is the latent dimension)
-usage: firstly define the block by `net = Self_Attn_C()`, then use it like `attn_out = net(conv_out)`
+usage: firstly define the block by `net = Self_Attn_C(in_dim)`, then use it like `attn_out = net(conv_out)`. You should see that the default latent_dim = in_dim // 8
 </br>
 
 ## 2 Spectral Norm Block
