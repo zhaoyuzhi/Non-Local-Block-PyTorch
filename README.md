@@ -26,3 +26,8 @@ inputs: B * C * H * W feature maps
 returns: out: self attention value + input feature maps; attention: B * c * c (c is the latent dimension)
 usage: firstly import this file `from Spectralnorm import SpectralNorm`, then use it like `out = SpectralNorm(conv(in))`
 </br>
+
+## 3 Reference
+Wang, X., Girshick, R., Gupta, A., & He, K. (2018). Non-local neural networks. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 7794-7803).
+</br>
+Miyato, T., Kataoka, T., Koyama, M., & Yoshida, Y. (2018). Spectral normalization for generative adversarial networks. arXiv preprint arXiv:1802.05957.
